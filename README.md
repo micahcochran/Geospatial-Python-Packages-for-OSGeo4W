@@ -22,7 +22,7 @@ pip downloads the package metadata stored on the
 
 Check to see if pip is installed:
 ```
-C:\Users\mcochran\Desktop>pip --version
+C:\...>pip --version
 pip 7.1.2 from C:\OSGeo4W\apps\Python27\lib\site-packages (python 2.7)
 ```
 
@@ -197,9 +197,25 @@ pyproj requires PROJ 4.9.0 or greater.  (Required for the Geod class.)
 
 There are two different ways to install pyproj.  One uses the OSGeo4W
 version of library PROJ.4 the other compiles a copy of PROJ.4 (the 
-default installation).
+default installation).  The copy included with pyproj includes a
+patch for the hammer projection for an inverse (which is useful for
+basemap and world projection).  Many users will be fine without it.
 
-*Instructions forthcoming.*
+Instruction for using the OSGeo4W PROJ.4 (no compiling):
+* Download pyproj
+* unzip
+* Install:
+```
+C:\...> set PROJ_DIR=C:\OSGeo4W\
+C:\...\pyproj> python setup-proj.py install
+```
+
+Instruction for compiling pyproj with included version of PROJ.4: 
+# install Microsoft Visual C++ Compiler for Python 2.7 (see above), 
+if you have not already installed it.
+```
+C:\...> pip install pyproj
+```
 
 Shapely
 -------
