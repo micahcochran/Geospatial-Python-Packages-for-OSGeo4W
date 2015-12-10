@@ -109,7 +109,7 @@ Some python packages are very easy to install.
 
 basemap
 -------
-Install matplotlib and numpy (see above).
+Install [matplotlib](#matplotlib) and [numpy](#numpy-and-scipy).
 
 In versions of basemap 1.0.8 or greater you will have to install pyproj
 (see section below) and pyshp: 
@@ -160,12 +160,9 @@ Geopandas
 ---------
 [Geopandas on PyPi](https://pypi.python.org/pypi/Geopandas)
 
-Install `numpy` and `SciPy` through setup.
-```
-C:\...> setup
-```
+Install [matplotlib](#matplotlib) and [numpy](#numpy-and-scipy).
 
-Install Fiona (see above).
+Install [Fiona](#fiona).
 
 Install pandas separately, which has 
 [quite a few dependencies many are optional](https://github.com/pydata/pandas#dependencies).
@@ -211,8 +208,10 @@ C:\...\pyproj> python setup-proj.py install
 ```
 
 Instruction for compiling pyproj with included version of PROJ.4: 
-# install Microsoft Visual C++ Compiler for Python 2.7 (see above), 
-if you have not already installed it.
+* install [Microsoft Visual C++ Compiler for Python 2.7]
+("#microsoft-visual-c-compiler-for-python-27), if you have not already 
+installed it.
+then run:
 ```
 C:\...> pip install pyproj
 ```
@@ -221,7 +220,7 @@ Shapely
 -------
 [Shapely on PyPi](https://pypi.python.org/pypi/Shapely)
 
-Install  shapely (package name: python-shapely) through setup:
+Install shapely (package name: python-shapely) through setup:
 ```
 C:\...> setup
 ```
@@ -248,7 +247,7 @@ Packages Not Covered
 - rtree
    - requires libspatialindex which can be installed through `setup`
 
-Please submit your pull request to.
+Please submit your pull request to improve this document.
 
 Questions/Improvements
 ======================
