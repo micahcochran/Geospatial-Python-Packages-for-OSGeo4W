@@ -139,6 +139,8 @@ C:\...\basemap-1.0.7> pip install .
 
 Fiona
 -----
+
+TODO COMPLETE ME
 Fiona makes reading/writing GIS vector data from files pretty easy.
 
 [Fiona on PyPi](https://pypi.python.org/pypi/Fiona)
@@ -154,6 +156,7 @@ Install all the requirements ([requirements.txt]
 ```
 C:\...> pip install -r requirements.txt
 ```
+TODO COMPLETE ME
 
 
 Geopandas
