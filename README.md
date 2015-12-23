@@ -111,8 +111,10 @@ basemap
 -------
 Install [matplotlib](#matplotlib) and [numpy](#numpy-and-scipy).
 
-In versions of basemap 1.0.8 or greater you will have to install pyproj
-(see section below) and pyshp: 
+In versions of basemap 1.0.8 or greater you will have to additionally install
+[pyproj](#pyproj) and pyshp.  Pyproj will need PROJ4 with the inverse
+hammer transform, which basemap needs.  Which should be in PROJ.4 version
+4.9.3 or greater. Otherwise use the provided copy of pyproj.
 ```
 C:\...> pip install pyshp
 ```
@@ -140,15 +142,18 @@ C:\...\basemap-1.0.7> pip install .
 Fiona
 -----
 
-TODO COMPLETE ME
 Fiona makes reading/writing GIS vector data from files pretty easy.
 
 [Fiona on PyPi](https://pypi.python.org/pypi/Fiona)
 
-Install requirements GDAL (package name: gdal) and shapely (package name:
-python-shapely) through setup:
+Install requirements GDAL (package name: gdal) through setup:
 ```
 C:\...> setup
+```
+
+Install Cython:
+```
+C:\...> pip install Cython
 ```
 
 Install all the requirements ([requirements.txt]
@@ -156,7 +161,17 @@ Install all the requirements ([requirements.txt]
 ```
 C:\...> pip install -r requirements.txt
 ```
-TODO COMPLETE ME
+
+Install [Microsoft Visual C++ Compiler for Python 2.7]
+("#microsoft-visual-c-compiler-for-python-27), if you have not already 
+installed it.
+
+
+```
+set PATH=%PATH%;C:\OSGeo4W\share\gdal
+python setup.py build_ext -IC:\OSGeo4W\include -lgdal_i -LC:\OSGeo4W\lib
+python setup.py install
+```
 
 
 Geopandas
@@ -201,16 +216,16 @@ default installation).  The copy included with pyproj includes a
 patch for the hammer projection for an inverse (which is useful for
 basemap and world projection).  Many users will be fine without it.
 
-Instruction for using the OSGeo4W PROJ.4 (no compiling):
+**Instruction for using the OSGeo4W PROJ.4 (no compiling):**
 * Download pyproj
 * unzip
 * Install:
 ```
 C:\...> set PROJ_DIR=C:\OSGeo4W\
-C:\...\pyproj> python setup-proj.py install
+C:\...\pyproj> pip install .
 ```
 
-Instruction for compiling pyproj with included version of PROJ.4: 
+**Instruction for compiling pyproj with included version of PROJ.4:**
 * install [Microsoft Visual C++ Compiler for Python 2.7]
 ("#microsoft-visual-c-compiler-for-python-27), if you have not already 
 installed it.
