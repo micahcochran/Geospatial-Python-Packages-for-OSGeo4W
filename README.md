@@ -202,13 +202,14 @@ C:\...> pip install geopandas
 
 pyproj
 ------
-pyproj is a library to transform points from one projection (crs) into
-another projection (crs).  Also, it performs great circle distance
+pyproj is a library to transform points from one projection (CRS) into
+another projection (CRS).  Also, it performs great circle distance
 calculations.
 
 [pyproj on PyPi](https://pypi.python.org/pypi/Geopandas)
 
-pyproj requires PROJ 4.9.0 or greater.  (Required for the Geod class.)
+pyproj requires [PROJ 4.9.0](https://github.com/OSGeo/proj.4) or greater.
+(Required for the great circle distance calculations [Geod class].)
 
 There are two different ways to install pyproj.  One uses the OSGeo4W
 version of library PROJ.4 the other compiles a copy of PROJ.4 (the 
