@@ -206,7 +206,7 @@ pyproj is a library to transform points from one projection (CRS) into
 another projection (CRS).  Also, it performs great circle distance
 calculations.
 
-[pyproj on PyPi](https://pypi.python.org/pypi/Geopandas)
+[pyproj on PyPi](https://pypi.python.org/pypi/pyproj)
 
 pyproj requires [PROJ 4.9.0](https://github.com/OSGeo/proj.4) or greater.
 (Required for the great circle distance calculations [Geod class].)
