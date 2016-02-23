@@ -200,6 +200,11 @@ Install geopandas
 C:\...> pip install geopandas
 ```
 
+Tests are not installed
+```
+C:\...> py.test tests
+```
+
 pyproj
 ------
 pyproj is a library to transform points from one projection (CRS) into
