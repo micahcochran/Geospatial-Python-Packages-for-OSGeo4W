@@ -244,6 +244,16 @@ Shapely
 -------
 [Shapely on PyPi](https://pypi.python.org/pypi/Shapely)
 
+**Via Pip**
+(Install version 1.5.16+)
+* In the folder `C:\OSGeo4w\bin\`, make a copy `geos_c.dll` and name it `geos.dll`.
+```
+C:\...> set GEOS_CONFIG=C:\OSGeo4W\bin\
+C:\...> pip install shapely
+```
+
+**Via Setup**
+(Install version 1.2.18)
 Install shapely (package name: python-shapely) through setup:
 ```
 C:\...> setup
